@@ -1,14 +1,16 @@
-export function Income ({name,salary,date,id}){
+export function Income ({name,value,date,id}){
     this.id = id
     this.name = name;
-    this.salary = salary;
-    this.date = date
+    this.value = value;
+    this.date = date;
 }
 
-export function Cost ({name,cost,date,desc,id}){
+export function Cost ({name,value,date,desc,id,category}){
     this.id = id
     this.name = name;
-    this.cost = cost;
-    this.desc = desc
-    this.date = date
+    this.value = value;
+    this.category = category;
+    this.desc = desc;
+    this.date = date;
 }
+

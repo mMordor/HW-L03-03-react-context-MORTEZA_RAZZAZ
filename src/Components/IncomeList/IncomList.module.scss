@@ -1,6 +1,6 @@
 .layout{
     background-color: rgba(255, 255, 255, 0.938);
-    padding-top: 20px;
+    padding: 20px;
     grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 1;
@@ -13,6 +13,7 @@
     gap: 20px;
     
     .list{
+        background-color: rgba(28, 0, 128, 0.315);
         margin-bottom: 20px;
         width: 100%;
         height: 90%;
@@ -20,7 +21,10 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+        box-shadow: inset 0px 0px 10px black;
         gap:20px;
+        border-radius: 10px;
+        padding-top: 1rem;
         overflow: scroll;
         overflow-x:hidden;
         position: relative;

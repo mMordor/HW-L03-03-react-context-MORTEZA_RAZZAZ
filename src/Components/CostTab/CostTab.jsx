@@ -22,15 +22,6 @@ function CostTab() {
         
         <div className={style.layout}>
 
-          <div className={style.btnTab}>
-            {
-            isformcliked? 
-            <button onClick={addbtnhandl}>بازگشت به لیست هزینه ها</button>
-            :
-            <button onClick={addbtnhandl}>اضافه کردن هزینه</button>
-            }
-            
-          </div>
 
           <div className={style.list}>
           {
@@ -44,6 +35,15 @@ function CostTab() {
             ))
           
           }
+          </div>
+          <div className={style.btnTab}>
+            {
+            isformcliked? 
+            <button onClick={addbtnhandl}>بازگشت به لیست هزینه ها</button>
+            :
+            <button onClick={addbtnhandl}>اضافه کردن هزینه</button>
+            }
+            
           </div>
         </div>
        

@@ -1,21 +1,16 @@
 import React from 'react'
-import style from './IncomeChart.module.scss'
+import style from './Chart.module.scss'
 import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
-import { useContext } from 'react';
-import { IncomeContext } from '../../context';
 
 
-function IncomeChart() {
-  const {incomes} = useContext(IncomeContext)
+function Chart({transaction}) {
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042','#f2ff','#a23f','#ce14'];
 
-  console.log(incomes)
-
-
+  console.log(transaction)
   return (
     <div className={style.layout}>
       {
-        incomes.length < 1 ?
+        transaction.length < 1 ?
         
         "آماری وجود ندارد"
 
@@ -23,16 +18,16 @@ function IncomeChart() {
 
         <PieChart width={300} height={300}>
           <Pie
-            data={incomes}
+            data={transaction}
             innerRadius={50}
             cy={130}
             outerRadius={70}
             fill='#8884d8'
             paddingAngle={7}
-            dataKey={"salary"}
+            dataKey={"value"}
             label={({name,percent})=>`${name} ${(percent * 100).toFixed(0)}%`}
           >
-            {incomes.map((entry,index)=>(
+            {transaction.map((entry,index)=>(
               <Cell key={`cell-${index}`} fill={COLORS[index ]} />
             ))}
 
@@ -44,4 +39,4 @@ function IncomeChart() {
   )
 }
 
-export default IncomeChart
+export default Chart

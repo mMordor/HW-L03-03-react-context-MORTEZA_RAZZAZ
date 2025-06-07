@@ -1,19 +1,23 @@
 import React from 'react'
-import TotalIncom from '../../Components/TotalIncom/TotalIncome'
 import IncomeList from '../../Components/IncomeList/IncomeList'
-import IncomeChart from '../../Components/IncomeChart/IncomeChart'
+import Chart from '../../Components/Chart/Chart'
+import TotalCounter from '../../Components/TotalCounter/TotalCounter'
+import { useContext } from 'react'
+import { IncomeContext } from '../../context'
 
 
 
 
 
 function IncomePage() {
+ const {incomes} = useContext(IncomeContext);
  
+
   return (
     <>
-      <TotalIncom/>
+      <TotalCounter transaction={incomes}/>
       <IncomeList/>
-      <IncomeChart/>
+      <Chart transaction={incomes}/>
     </>
   )
 }

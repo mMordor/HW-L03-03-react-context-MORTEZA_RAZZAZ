@@ -23,15 +23,6 @@ function IncomeList() {
         
         <div className={style.layout}>
 
-          <div className={style.btnTab}>
-            {
-            isformcliked? 
-            <button onClick={addbtnhandl}>بازگشت به لیست منبع درآمد</button>
-            :
-            <button onClick={addbtnhandl}>اضافه کردن منبع درآمد</button>
-            }
-            
-          </div>
 
           <div className={style.list}>
           {
@@ -43,6 +34,15 @@ function IncomeList() {
             ))
           
           }
+          </div>
+          <div className={style.btnTab}>
+            {
+            isformcliked? 
+            <button onClick={addbtnhandl}>بازگشت به لیست منبع درآمد</button>
+            :
+            <button onClick={addbtnhandl}>اضافه کردن منبع درآمد</button>
+            }
+            
           </div>
         </div>
        
