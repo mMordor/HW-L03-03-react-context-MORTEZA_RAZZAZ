@@ -68,9 +68,9 @@ function List({list,setList,categorieslist,isIncome}) {
           <div className={style.btnTab}>
             {
             isformcliked? 
-            <button onClick={addbtnhandl}>بازگشت به لیست منبع درآمد</button>
+            <button onClick={addbtnhandl}>{!isIncome ? "بازگشت به لیست هزینه ها" : "بازگشت به لیست منبع درآمد ها"}</button>
             :
-            <button onClick={addbtnhandl}>اضافه کردن منبع درآمد</button>
+            <button onClick={addbtnhandl}>{!isIncome ? "اضافه کردن هزینه" : "اضافه کردن منبع درآمد"}</button>
             }
             
           </div>

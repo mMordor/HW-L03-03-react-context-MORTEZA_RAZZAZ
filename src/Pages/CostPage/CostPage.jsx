@@ -9,7 +9,7 @@ function CostPage() {
   const {costs,setCosts,costcategories} = useContext(CostContext);
   return (
     <>
-      <TotalCounter transaction={costs}/>
+      <TotalCounter isIncome={false} transaction={costs}/>
       <List isIncome={false} setList={setCosts} list={costs} categorieslist={costcategories}/>
       <Chart transaction={costs}/>
     </>

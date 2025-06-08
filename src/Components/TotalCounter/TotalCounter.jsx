@@ -5,7 +5,7 @@ import { CostContext } from '../../context';
 import { useEffect } from 'react';
 import { useSpring, animated } from 'react-spring'
 
-function TotalCounter({transaction}) {
+function TotalCounter({transaction,isIncome}) {
   const [total,setTotal] = useState(0);
 
   useEffect(()=>{
@@ -33,8 +33,7 @@ function TotalCounter({transaction}) {
     <div className={style.layout}> 
       
         <h1><Number n={total}/></h1>
-
-      <h3>هزینه کل</h3>
+      <h3>{isIncome ? "درآمد کل" : "هزینه کل"}</h3>
     </div>
   )
 }

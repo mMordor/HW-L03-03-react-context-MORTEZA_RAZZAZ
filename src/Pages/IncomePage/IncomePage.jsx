@@ -14,7 +14,7 @@ function IncomePage() {
 
   return (
     <>
-      <TotalCounter transaction={incomes}/>
+      <TotalCounter isIncome={true} transaction={incomes}/>
       <List  isIncome={true} setList={setIncomes} list={incomes} categorieslist={incomecategories}/>
       <Chart transaction={incomes}/>
     </>
