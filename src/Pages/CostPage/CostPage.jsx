@@ -1,16 +1,16 @@
 import React from 'react'
-import CostTab from '../../Components/CostTab/CostTab'
 import Chart from '../../Components/Chart/Chart'
 import TotalCounter from '../../Components/TotalCounter/TotalCounter'
 import { useContext } from 'react'
 import { CostContext } from '../../context'
+import List from '../../Components/List/List'
 
 function CostPage() {
-  const {costs} = useContext(CostContext);
+  const {costs,setCosts,costcategories} = useContext(CostContext);
   return (
     <>
       <TotalCounter transaction={costs}/>
-      <CostTab/>
+      <List isIncome={false} setList={setCosts} list={costs} categorieslist={costcategories}/>
       <Chart transaction={costs}/>
     </>
   )

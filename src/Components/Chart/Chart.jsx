@@ -6,7 +6,6 @@ import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
 function Chart({transaction}) {
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042','#f2ff','#a23f','#ce14'];
 
-  console.log(transaction)
   return (
     <div className={style.layout}>
       {

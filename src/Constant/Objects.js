@@ -1,7 +1,8 @@
-export function Income ({name,value,date,id}){
+export function Income ({name,value,date,id,category}){
     this.id = id
     this.name = name;
     this.value = value;
+    this.category = category;
     this.date = date;
 }
 
