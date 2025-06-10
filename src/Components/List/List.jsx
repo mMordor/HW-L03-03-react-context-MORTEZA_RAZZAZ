@@ -29,7 +29,7 @@ function List({list,setList,categorieslist,isIncome}) {
       item.desc?.includes(searched)
     )
   )
-
+  
   return (
     <>
         
@@ -49,20 +49,24 @@ function List({list,setList,categorieslist,isIncome}) {
               <IncomeForm/> 
               :
               <CostForm/>
-            : 
-            filteredlist.map((item)=>(
-              <Card isIncom={isIncome}
-                setisformclicked={setIsformcliked}
-                id={item.id} name={item.name}
-                value={item.value} date={item.date}
-                category={item.category}
-                desc={item.desc}
-                key={item.id}
-                list={list}
-                setList={setList}
-              />
-            ))
-          
+            :
+              filteredlist.length < 1 ?
+                <div className='w-full h-full flex justify-center items-center font-bold text-[20px]'>
+                  موردی وجود ندارد
+                </div>
+              :
+              filteredlist.map((item)=>(
+                <Card isIncom={isIncome}
+                  setisformclicked={setIsformcliked}
+                  id={item.id} name={item.name}
+                  value={item.value} date={item.date}
+                  category={item.category}
+                  desc={item.desc}
+                  key={item.id}
+                  list={list}
+                  setList={setList}
+                />
+              ))
           }
           </div>
           <div className={style.btnTab}>

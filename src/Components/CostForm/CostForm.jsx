@@ -39,6 +39,10 @@ function CostForm() {
         setCosts((prev)=>{
             return[...prev,newCost]
         }) 
+
+        const data = JSON.parse(localStorage.getItem("Data"));
+        data.costs = [...data.costs,newCost];
+        localStorage.setItem("Data",JSON.stringify(data))
         
     }
 

@@ -1,6 +1,6 @@
 .card{
     width: 90%;
-    height: 70px;
+    height: fit-content;
     padding: 20px;
     border: 1px solid black;
     background-color: rgb(4, 21, 58);
@@ -9,6 +9,13 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+@media (max-width:560px) {
+    .card{
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 
 .optionsbtn{
@@ -24,4 +31,10 @@
             color: gray;
         }
     }
+}
+
+.desc{
+    max-width: 100px;
+    min-width: 50px;
+    overflow-x: scroll;
 }

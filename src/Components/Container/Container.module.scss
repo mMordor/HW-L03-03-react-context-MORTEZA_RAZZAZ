@@ -1,5 +1,5 @@
 .container_layout{
-    min-width: 65%;
+    width: 80%;
     background-color: rgba(255, 255, 255, 0.5);
     height: 80%;
     border-radius: 8px;
@@ -9,4 +9,11 @@
     grid-template-rows: 1fr 1fr 1fr;
     gap: 10px;
     padding: 30px;
+}
+@media (max-width:1000px) {
+.container_layout{
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 200px 2fr;
+    width: 90%;
+}    
 }

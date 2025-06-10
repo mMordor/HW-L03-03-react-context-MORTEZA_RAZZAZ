@@ -17,7 +17,6 @@ function Card({name,value,date,id,category,desc,isIncom,list,setList}) {
     
 
   }
-  console.log(list)
 
   return (
     <div className={style.card}>
@@ -27,11 +26,17 @@ function Card({name,value,date,id,category,desc,isIncom,list,setList}) {
         <div className={isIncom? 'bg-green-600 rounded-[12px] pl-2 pr-2' : 'bg-red-600 rounded-[12px] pl-2 pr-2'}>
             {category}
         </div>
+        {
+            desc ? 
+            <div className={style.desc}>
+                {desc}
+            </div>  
+            : 
+            ""
+        }
+         
         <div>
-            {desc}
-        </div>  
-        <div>
-            {value}
+            {value.toLocaleString()}
         </div>  
         <div>
             {name}

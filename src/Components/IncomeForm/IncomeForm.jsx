@@ -18,6 +18,7 @@ function IncomeForm() {
     const nameHandle = (e)=>{
         setNewincome(prev=>{return{...prev,name:e.target.value}})
     }
+    
 
     const salaryHandle = (e)=>{
         setNewincome(prev=>{return{...prev,value:Number.parseInt(e.target.value) }})
@@ -35,7 +36,11 @@ function IncomeForm() {
 
         setIncomes((prev)=>{
             return[...prev,newincom]
-        }) 
+        })
+
+        const data = JSON.parse(localStorage.getItem("Data"));
+        data.incomes = [...data.incomes,newincom];
+        localStorage.setItem("Data",JSON.stringify(data))
         
     }
 

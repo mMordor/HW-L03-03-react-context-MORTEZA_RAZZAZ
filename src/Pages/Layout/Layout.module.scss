@@ -6,3 +6,10 @@
     align-items: center;
     gap: 30px;
 }
+
+@media (max-width:1000px) {
+    .layout{
+        flex-direction: column;
+        height: min-content;
+    }
+}

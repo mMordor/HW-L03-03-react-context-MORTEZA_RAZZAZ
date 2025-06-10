@@ -15,12 +15,11 @@ function Chart({transaction}) {
 
         :
 
-        <PieChart width={300} height={300}>
+        <PieChart width={400} height={400}>
           <Pie
             data={transaction}
-            innerRadius={50}
-            cy={130}
-            outerRadius={70}
+            innerRadius={40}
+            outerRadius={60}
             fill='#8884d8'
             paddingAngle={7}
             dataKey={"value"}

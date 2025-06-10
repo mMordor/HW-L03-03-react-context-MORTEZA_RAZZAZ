@@ -19,3 +19,11 @@
         font-size:large;
     }
 }
+@media (max-width:870px) {
+    .layout{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+}
